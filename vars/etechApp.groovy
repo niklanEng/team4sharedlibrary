@@ -1,4 +1,4 @@
-def call(string repoUrl){
+def call(string repourl){
  	pipeline{
  		agent any
  		stages{
@@ -11,7 +11,7 @@ def call(string repoUrl){
  			stage('checkout code'){
  				steps{
  					git branch: 'main'
- 					url: "$(repoUrl)"
+ 					url: "$(repourl)"
  				}
  			}
  			stage ('checkout code'){
