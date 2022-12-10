@@ -7,7 +7,7 @@ def call(String repoUrl){
                     sh 'free -g'
                 }
             }
-            stage('checkout code'){
+            stage('checkout code') {
                 steps{
                     git branch: 'main',
                            url: "${repoUrl}"
