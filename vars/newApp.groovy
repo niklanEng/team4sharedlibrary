@@ -4,18 +4,20 @@ def uber(String repoUrl){
         stages{
             stage('1-build'){
                 steps{
-                    sh 'free -m'
+                    sh 'free -g'
                 }
             }
-            stage("checkout code") {
-                steps {
+            stage('checkout code'){
+                steps{
                     git branch: 'main',
                            url: "${repoUrl}"
-        }
-    }
-    stage('closing'){
-        steps{
-            echo "new project"
+                }
+            }
+            stage('closing'){
+                steps{
+                    echo "new project"
+                }
+            }
         }
     }
 }
